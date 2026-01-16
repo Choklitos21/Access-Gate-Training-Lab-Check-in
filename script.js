@@ -96,6 +96,9 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
         } else if (finalDecision(data) === "¡Access Granted!") {
             newH1.style.color = "green"
             newDiv.style.borderColor = "green"
+            let myArray = JSON.parse(localStorage.getItem('previousCheckIns')) || [];
+            myArray.push(data);
+            localStorage.setItem('previousCheckIns', JSON.stringify(myArray));
         } else {
             newH1.style.color = "red"
             newDiv.style.borderColor = "red"
