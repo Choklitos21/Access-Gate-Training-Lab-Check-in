@@ -64,7 +64,7 @@ function finalDecision(user) {
         let text = "!Access Denied¡<br>"
         user["userAge"] < 18 ? text += "You're under 18<br>" : ""
         user["confirmLab"] === false ? text += "You didn't accept the lab rules<br>" : ""
-        user.userRole === "visitor" ? text += "The role you selected is not valid" : ""
+        user.userRole  === "visitor" ? text += "The role you selected is not valid<br>" : ""
         return text
     } else if (user["score"] >= 2) {
         return "¡Under review!"
@@ -108,7 +108,7 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
         document.body.appendChild(newDiv)
     } else {
         let message = document.getElementById("decision")
-        message.textContent = finalDecision(data)
+        message.innerHTML = finalDecision(data)
         if (finalDecision(data) === "¡Under review!") {
             message.style.color = "orange"
             message.parentElement.style.borderColor = "orange"
