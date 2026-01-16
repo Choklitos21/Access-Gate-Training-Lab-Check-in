@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <form class="myForm" action="" id="myForm">
+        <label for="userName">What's your name?</label>
+        <input type="text" name="userName" id="userName" placeholder="Your name" required>
+
+        <label for="userAge">How old are you?</label>
+        <input type="number" name="userAge" id="userAge" placeholder="Your age" required min="0" max="100">
+
+        <label for="userRole">Rol</label>
+        <select name="userRole" id="userRole" required>
+            <option value="" disabled selected>--Please choose an option--</option>
+            <option value="coder">Coder</option>
+            <option value="visitor">Visitor</option>
+            <option value="tutor">Tutor</option>
+        </select>
+
+        <div>
+            <input type="checkbox" id="confirmLab" name="confirmLab" value="true">
+            <label for="confirmLab">Accept lab rules</label>
+        </div>
+
+        <label for="labHours">How many hours will you work today?</label>
+        <input type="number" name="labHours" id="labHours" placeholder="hours" required min="0" max="12">
+
+        <button type="submit">Submit</button>
+    </form>
+<script src="script.js"></script>
+</body>
+</html>
